@@ -100,4 +100,8 @@ enableRobotsTXT: true
 # Compress all files when output
 minify:
   minifyOutput: true
+
+# 设置站点静态文件输出目录
+# Set the output directory for the site's static files
+publishDir: public
   
