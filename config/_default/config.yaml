@@ -26,10 +26,11 @@ languageCode: zh-CN
 # 是否包含中文，日语，韩文
 # Whether contains Chinese, Japanese and Korean
 hasCJKLanguage: true
-# 每页显示文章数量
-# Display items per page
-paginate: 12
-paginatePath: "page"
+# 分页配置
+# Pagination configuration
+pagination:
+  pagerSize: 12
+  path: "page"
 # 开启支持表情符号
 # Enable Emoji support
 enableEmoji: true
