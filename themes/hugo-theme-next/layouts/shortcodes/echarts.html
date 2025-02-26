@@ -1,0 +1,13 @@
+{{ if .Inner }}
+<div class="echarts" {{ with .Get 0 }}id="{{ . }}"{{ end }} style="width: 100%;{{ with .Get 1 }} height: {{ . }};{{ else }} height: 400px;{{ end }}"></div>
+<script type="text/javascript">
+  $(function() {
+    var chart = echarts.init(document.getElementsByClassName('echarts')[document.getElementsByClassName('echarts').length - 1]);
+    var option = {{ .Inner | safeJS }};
+    chart.setOption(option);
+    window.addEventListener('resize', function() {
+      chart.resize();
+    });
+  });
+</script>
+{{ end }}

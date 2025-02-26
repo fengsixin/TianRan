@@ -1,0 +1,178 @@
+{
+  "main": {
+    "id": "4bc3c759d27b69ce",
+    "type": "split",
+    "children": [
+      {
+        "id": "9482ab40a839f440",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1a281bca77497994",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/post/20230812-note.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "76c494b9d0f3af94",
+    "type": "split",
+    "children": [
+      {
+        "id": "fd33c5131851d777",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "55d674e5b8032c67",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "fbda1275a37253c0",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "b15801b6c5cf5c30",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "840aa14288f6aeac",
+    "type": "split",
+    "children": [
+      {
+        "id": "135cd4b446b43079",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ed503b693a69e0b7",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "content/post/20230812-note.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "4b672a6d94315f8d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "content/post/20230812-note.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "32c5afac55e233fc",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "2ad7767f43c749ed",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "content/post/20230812-note.md"
+              }
+            }
+          },
+          {
+            "id": "e7bf0ef580134baa",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "1a281bca77497994",
+  "lastOpenFiles": [
+    "content/post/20230801-helloworld.md",
+    "content/post/20230804-python.md",
+    "content/post/20230807-python.md",
+    "content/post/20230808-POL.md",
+    "content/post/20230809-POL.md",
+    "content/post/20230810-note.md",
+    "content/post/20230812-note.md",
+    "content/post/20230815-note.md",
+    "themes/hugo-theme-next/layouts/shortcodes/rawhtml.html",
+    "content/about.md",
+    "content/post/未命名.md",
+    "().md",
+    "未命名.md",
+    "content/post/20230807-obsidian.md"
+  ]
+}

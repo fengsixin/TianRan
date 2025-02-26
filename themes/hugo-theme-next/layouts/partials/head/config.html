@@ -37,4 +37,12 @@
 {{ $pageCfg = merge $pageCfg (dict "math" $math) }}
 {{ end }}
 
+{{/* Append echart plugin */}}
+{{ if .Params.echart }}
+{{ $echart := dict
+  "js"  .Site.Data.resources.plugins.echart.js
+}}
+{{ $pageCfg = merge $pageCfg (dict "echart" $echart) }}
+{{ end }}
+
 <script class="next-config" data-name="page" type="application/json">{{ $pageCfg }}</script>
