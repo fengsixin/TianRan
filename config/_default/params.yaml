@@ -47,10 +47,10 @@ customLogo: #/imgs/hugo_next_logo.png
 
 # 用户自定义文件配置
 # Define custom file paths.
-# customFilePath:
-#   sidebar: custom_sidebar.html
-#   footer: custom_footer.html
-#   style: /css/custom_style.css
+customFilePath:
+#  sidebar: custom_sidebar.html
+#  footer: custom_footer.html
+#  style: /css/custom_style.css
 
 # 知识共享国际许可 4.0
 # 更多信息： https://creativecommons.org/about/cclicenses/
@@ -357,7 +357,7 @@ rewardSets:
   # 是否开启捐赠按钮，开启后将在每个文章页面底部显示
   # If true, a donate button will be displayed 
   # in every article by default.
-  enable: true
+  enable: false
   # 是否开启捐赠方式的动画效果
   # If true, the donate type title will with animation.
   animation: true
@@ -381,7 +381,7 @@ rewardSets:
 followMe:
   #channel0: Twitter || https://twitter.com/username || fab fa-twitter
   #channel1: Telegram || https://t.me/channel_name || fab fa-telegram
-  channel2: WeChat || /images/wechat_channel.jpg || fab fa-weixin
+  #channel2: WeChat || /images/wechat_channel.jpg || fab fa-weixin
   #channel3: RSS || /atom.xml || fa fa-rss
 
 # 文章的在线编辑
@@ -671,7 +671,7 @@ comments:
 # Waline comments system
 # More info seee: https://waline.js.org/
 waline:
-  placeholder: "请文明发言哟 ヾ(≧▽≦*)o \n\n可用快捷键选取表情符号：😀😄😁🥳👻👽👀🚄\n(Window系统：Win+.，Mac系统：Control+Command+Space)"
+  placeholder: "请文明发言哟 ヾ(≧▽≦)ゞ"
   sofa: "快来发表你的意见吧 (≧∀≦)ゞ"
   emoji: false
   imgUploader: false

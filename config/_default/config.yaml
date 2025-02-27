@@ -29,7 +29,7 @@ hasCJKLanguage: true
 # 分页配置
 # Pagination configuration
 pagination:
-  pagerSize: 12
+  pagerSize: 10
   path: "page"
 # 开启支持表情符号
 # Enable Emoji support
