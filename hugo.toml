@@ -1,0 +1,17 @@
+baseURL = 'http://localhost:1313/'
+languageCode = 'zh-cn'
+DefaultContentLanguage = 'zh-cn'
+title = 'FSX的博客'
+theme = 'anatole'
+
+summarylength = 10
+enableEmoji = true
+enableRobotsTXT = true
+
+# Syntax highlighting
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+
+# Localized dates requires Hugo version 0.87.0
+localizedDates = false

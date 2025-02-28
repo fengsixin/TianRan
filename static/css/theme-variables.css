@@ -1,0 +1,19 @@
+:root {
+  /* 亮色模式变量 */
+  --heading-color: #333;
+  --body-color: #333;
+  --card-bg-color: #f8f9fa;
+  --border-color: #eee;
+  --secondary-text-color: #666;
+  --link-color: #0066cc;
+}
+
+/* 暗色模式变量 */
+:root[data-theme="dark"] {
+  --heading-color: #eeeeee;
+  --body-color: #eeeeee;
+  --card-bg-color: #2a2a2a;
+  --border-color: #404040;
+  --secondary-text-color: #9f9f9f;
+  --link-color: #6086b4;
+}

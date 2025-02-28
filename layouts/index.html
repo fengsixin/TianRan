@@ -1,0 +1,176 @@
+{{ define "main" }}
+<div class="home-sections">
+  <!-- 关于我部分 -->
+  <section class="about-section">
+    <h2 class="section-title">关于我</h2>
+    {{ with .Site.GetPage "/about" }}
+      {{ .Summary }}
+    {{ end }}
+    <a href="/about/" class="read-more">了解更多</a>
+  </section>
+
+  <!-- 近期动态部分 -->
+  <section class="news-section">
+    <h2 class="section-title"><a href="/news/">近期动态</a></h2>
+    <div class="news-grid">
+      {{ $newsPages := where .Site.RegularPages "Section" "news" }}
+      {{ $pinnedNews := where $newsPages ".Params.pinned" "==" true | first 3 }}
+      {{ $nonPinnedNews := where $newsPages ".Params.pinned" "!=" true }}
+      {{ $sortedNews := union $pinnedNews $nonPinnedNews }}
+      {{ range first 3 $sortedNews }}
+      <div class="news-card">
+        <span class="news-date">{{ .Date.Format "2006-01-02" }}</span>
+        <h3>{{ .Title }}</h3>
+        <p>{{ .Summary }}</p>
+        <a href="{{ .RelPermalink }}" class="read-more">了解更多</a>
+      </div>
+      {{ end }}
+      {{ if ge (len $sortedNews) 4 }}
+      <div class="news-card">
+        <h3><a href="/news/">浏览更多</a></h3>
+      </div>
+      {{ else }}
+      <div class="news-card">
+        <h3>敬请期待</h3>
+      </div>
+      {{ end }}
+    </div>
+  </section>
+
+  <!-- 项目展示部分 -->
+  <section class="projects-section">
+    <h2 class="section-title"><a href="/projects/">项目展示</a></h2>
+    <div class="projects-grid">
+      {{ $projectPages := where .Site.RegularPages "Section" "projects" }}
+      {{ $pinnedProjects := where $projectPages ".Params.pinned" "==" true | first 3 }}
+      {{ $nonPinnedProjects := where $projectPages ".Params.pinned" "!=" true }}
+      {{ $sortedProjects := union $pinnedProjects $nonPinnedProjects }}
+      {{ range first 3 $sortedProjects }}
+      <div class="project-card">
+        <h3>{{ .Title }}</h3>
+        <p>{{ .Summary }}</p>
+        <a href="{{ .RelPermalink }}" class="read-more">了解更多</a>
+      </div>
+      {{ end }}
+      {{ if ge (len $sortedProjects) 4 }}
+      <div class="project-card">
+        <h3><a href="/projects/">浏览更多</a></h3>
+      </div>
+      {{ else }}
+      <div class="project-card">
+        <h3>敬请期待</h3>
+      </div>
+      {{ end }}
+    </div>
+  </section>
+</div>
+
+<style>
+.home-sections {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.section-title {
+  font-size: 2em;
+  margin-bottom: 1.5rem;
+  color: var(--heading-color, #333);
+  border-bottom: 2px solid var(--border-color, #eee);
+  padding-bottom: 0.5rem;
+}
+
+.section-title a {
+  color: var(--heading-color, #333);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.section-title a:hover {
+  color: var(--link-hover-color, #0056b3);
+}
+
+.about-section,
+.news-section,
+.projects-section {
+  margin-bottom: 3rem;
+}
+
+.about-card,
+.news-card,
+.project-card {
+  background: var(--content-bg-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  height: auto;
+  min-height: 200px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-size: 1.25em;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.card-description {
+  margin-bottom: 0.5rem;
+  font-size: 0.9em;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.about-card:hover,
+.news-card:hover,
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.news-grid,
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--link-color, #0066cc);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.read-more:hover {
+  color: var(--link-hover-color, #0056b3);
+}
+
+@media (max-width: 768px) {
+  .home-sections {
+    padding: 1rem;
+  }
+  
+  .news-grid,
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-card,
+  .news-card,
+  .project-card {
+    padding: 1.5rem;
+  }
+  
+  .section-title {
+    font-size: 1.5em;
+  }
+}
+</style>
+{{ end }}

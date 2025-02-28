@@ -1,0 +1,38 @@
+baseURL: "https://fsx.design"
+languageCode: "zh-cn"
+DefaultContentLanguage: "zh-cn"
+title: "FSX的博客"
+
+theme: "anatole"
+
+summarylength: 10
+enableEmoji: true
+enableRobotsTXT: true
+
+# Syntax highlighting
+pygmentsUseClasses: true
+pygmentsCodeFences: true
+pygmentsCodefencesGuessSyntax: true
+
+# Localized dates requires Hugo version 0.87.0
+localizedDates: false
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: false
+
+taxonomies:
+  category: "categories"
+  series: "series"
+  tag: "tags"
+
+related:
+  includeNewer: true
+  threshold: 80
+  toLower: true
+  indices:
+    - name: 'keywords'
+      weight: 100
+    - name: 'tags'
+      weight: 80

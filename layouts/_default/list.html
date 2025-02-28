@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div class="list-page">
+  <h1>{{ .Title }}</h1>
+  <div class="article-grid">
+    {{ $pages := .Pages }}
+    {{ $pinnedPages := where $pages ".Params.pinned" "==" true }}
+    {{ $nonPinnedPages := where $pages ".Params.pinned" "!=" true }}
+    {{ $sortedPages := union $pinnedPages $nonPinnedPages }}
+    {{ range $sortedPages }}
+<div class="news-card">
+      <span class="article-date">{{ .Date.Format "2006-01-02" }}</span>
+      <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      <p>{{ .Summary }}</p>
+      <a href="{{ .RelPermalink }}" class="read-more">了解更多</a>
+    </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
