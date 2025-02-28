@@ -19,6 +19,3 @@ hugo.linux
 
 # Ignore Node modules
 node_modules/
-
-# Keep themes directory
-!themes/
